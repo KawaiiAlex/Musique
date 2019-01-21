@@ -1,7 +1,7 @@
 const config = require("../config.json")
 module.exports.run = async (client, message, args) => {
         if(message.author.id !== config.adminID){
-            message.channel.send(`:x: ${message.author} Tu n'est pas mon developpeur.`)
+            message.channel.send(`:x: ${message.author} Tu n'est pas Alex.`)
             return;
         }else{
                 try {
@@ -23,16 +23,16 @@ module.exports.run = async (client, message, args) => {
       ],
       footer:{
         icon_url: client.user.avatarURL,
-        text: 'eval by shiro', 
+        text: 'eval', 
         }}});
     } catch (err) {
       message.channel.send({embed:{
         color: 0x030303,
-title: 'érreur',
+title: 'erreur',
 description: `\`\`\`xl\n${clean(err)}\n\`\`\``,
 footer: {
 icon_url: client.user.avatarURL,
-text: 'eval by shiro'
+text: 'eval'
 },
 }})
     }
